@@ -1,0 +1,92 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    html,
+    body {
+        width: 210mm;
+        height: 297mm;
+        color: rgba(0, 0, 0, 1);
+    }
+    a {
+        display: block;
+    }
+    a::after{
+        content: " (" attr(href) ") ";
+    }
+    img, 
+    aside, 
+    nav, 
+    header span.drop-in,
+    header span::before, 
+    header span::after,
+    .overlay {
+        display: none;
+    }
+    .header-main {
+        height: auto; 
+    }
+    .header-info {
+        height: auto;
+    }
+    header h1 {
+        display: block;
+        height: auto;
+        width: 100%;
+        font-family: 'Playfair Display', serif;
+        font-size: 12vw;
+        line-height: 10vw;
+        text-align: left;
+        padding: 2rem;
+    }
+    main h1 {
+        width: 100%;
+        text-align: left;
+        padding: 0rem;
+    }
+    article,
+    section {
+        width: 100%;
+        display: block;
+        text-align: justify;
+    }
+    article .flex-section-welcome {
+        display: block;
+        width: 100%;
+        text-align: justify;
+        margin: 0rem;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+    .flex-item-section:nth-child(odd) {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0rem;
+    }
+    .flex-item-section:nth-child(even) {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0rem;
+    }
+    form {
+        display: none;
+    }
+    .flex-item-section-contact {
+        display: block;
+        height: 50px;
+        padding: 2rem;
+    }
+    .flex-item-section-contact::after {
+        content: " (mailto:phil.ziegelbauer@gmx.at) ";
+    }
+    .flex-container-article, .flex-section-info {
+        display: block;
+        width: 100% !important;
+    }
+    .flex-container-article img {
+        display: none !important;
+    }
+}
